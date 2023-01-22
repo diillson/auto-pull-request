@@ -32,7 +32,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: pull-request
-    uses: diillson/auto-pull-request@latest
+    uses: diillson/auto-pull-request@v1.0.1
       with:
         destination_branch: "main"
 ```
@@ -53,7 +53,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: pull-request
-    uses: diillson/auto-pull-request@latest
+    uses: diillson/auto-pull-request@v1.0.1
       with:
         source_branch: ""                                 # If blank, default: triggered branch
         destination_branch: "main"                      # If blank, default: master
@@ -86,7 +86,7 @@ jobs:
       with:
         repository: "octocat/hello-world"
     - name: pull-request
-    uses: diillson/auto-pull-request@latest
+    uses: diillson/auto-pull-request@v1.0.1
       with:
         destination_branch: "main"
         github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -116,7 +116,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: pull-request
       id: open-pr
-      uses: diillson/auto-pull-request@latest
+      uses: diillson/auto-pull-request@v1.0.1
       with:
         destination_branch: "main"
         github_token: ${{ secrets.GITHUB_TOKEN }}
