@@ -32,7 +32,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: pull-request
-    uses: diillson/auto-pull-request@v1.0.1
+      uses: diillson/auto-pull-request@v1.0.1
       with:
         destination_branch: "main"
 ```
@@ -53,7 +53,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: pull-request
-    uses: diillson/auto-pull-request@v1.0.1
+      uses: diillson/auto-pull-request@v1.0.1
       with:
         source_branch: ""                                 # If blank, default: triggered branch
         destination_branch: "main"                      # If blank, default: master
@@ -86,7 +86,7 @@ jobs:
       with:
         repository: "octocat/hello-world"
     - name: pull-request
-    uses: diillson/auto-pull-request@v1.0.1
+      uses: diillson/auto-pull-request@v1.0.1
       with:
         destination_branch: "main"
         github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -147,7 +147,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: pull-request
-    uses: docker://public.ecr.aws/y2v3z0w4/pullrequest:v1
+      uses: docker://public.ecr.aws/y2v3z0w4/pullrequest:v1
       with:
         destination_branch: "main"
         github_token: ${{ secrets.GITHUB_TOKEN }}         # Required to use container image
